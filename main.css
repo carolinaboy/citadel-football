@@ -1,0 +1,147 @@
+@font-face {
+  font-family: Trajan;
+  src: url('fonts/Trajan Pro Regular.ttf');
+}
+
+body{
+  background-color: #8c8e91;
+  padding:  25px;
+}
+
+div.container{
+  background-color: #4D90CD;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+  "header header"
+  "main aside"
+  "footer footer";
+}
+
+h1{
+  color: #002448;
+  font-size: 50px;
+  font-family: Trajan;
+}
+
+h2{
+  color: #0D0711;
+  font-size: 35px;
+  font-family: 'Rasa', serif;
+}
+
+ul{
+  margin-left: 30px;
+}
+
+a:link {
+    color: #002448;
+}
+
+
+a:visited {
+    color:#0D0711;
+}
+
+
+a:hover {
+    color: #DB1A1A;
+}
+
+
+a:active {
+    color: #8C8E91;
+}
+
+img.center{
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+img{
+  padding: 10px;
+
+}
+
+header{
+  grid-area: header;
+  color: #ffffff;
+  text-align: center;
+}
+
+main{
+  grid-area: main;
+  color: #ffffff;
+  font-size: 21px;
+  padding: 10px;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+aside{
+  grid-area: aside;
+  color: #ffffff;
+    padding: 10px;
+  font-family: 'Crimson Text', serif;
+}
+
+footer{
+  grid-area: footer;
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+}
+
+caption {
+  color: #002448;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+table {
+ border-collapse: collapse;
+}
+
+tr.away {
+  background-color: #DB1A1A;
+}
+
+tr.home {
+background-color: #002448;
+}
+@media (max-width: 600px){
+  div.container{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+  }
+  table {
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    border: 1px solid #aaaaaa;
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  td {
+    display: block;
+    text-align: right;
+  }
+
+  td:before {
+    content: attr(aria-label);
+    float: left;
+    font-weight: bold;
+  }
+  }
